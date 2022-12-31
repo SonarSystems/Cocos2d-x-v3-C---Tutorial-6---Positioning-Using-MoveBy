@@ -34,12 +34,10 @@ bool HelloWorld::init()
     
     mySprite->setPosition(Point((visibleSize.width / 2) + origin.x, (visibleSize.height / 2) + origin.y));
     
-    this->addChild(mySprite);
-    
-    auto action = MoveBy::create(3, Point(50, 150));
-    
-    mySprite->runAction(action);
-    
+    this->addChild(mySprite);// Adding the SPRITE
+    //In MoveBy, we are specifying how much units to 'MoveBy' the sprite.
+    auto action = MoveBy::create(3, Point(50, 150));// 3 seconds is the Duration and we are moving the current sprite by 100 units in the x-axis and 0 units in the y-axis.
+    mysprite->runAction(action);// First the syntax and then action inside the brackets that we just created.
     return true;
 }
 
